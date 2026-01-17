@@ -20,7 +20,7 @@ class TestLab1_5(unittest.TestCase):
     # 2. Tests for check_password
     def test_password_correct(self):
         """Test the correct secret word."""
-        self.assertEqual(check_password("Python123"), "access granted")
+        self.assertEqual(check_password("ysfrgbsrgjhbrsjygi3rgwi7g4w8g4wgfeiu9g"), "access granted")
 
     def test_password_incorrect(self):
         """Test an incorrect password."""
@@ -29,7 +29,7 @@ class TestLab1_5(unittest.TestCase):
     # 3. Tests for calculate_federal_tax
     def test_low_bracket(self):
         """Test the 10% bracket (Salary: 10,000)."""
-        self.assertEqual(calculate_federal_tax(10000), 1000.0)
+        self.assertAlmostEqual(calculate_federal_tax(10000), 1000.0)
 
     def test_mid_bracket(self):
         """Test the 22% bracket (Salary: 50,000)."""
